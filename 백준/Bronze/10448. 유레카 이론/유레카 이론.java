@@ -29,9 +29,8 @@ public class Main {
             }
     }
 
-    //수가 맞는지 판별해줘야함 -> 반복문 돌면서 찾으면 return1, 3
+    //수가 맞는지 판별해줘야함 -> 반복문 돌면서 찾으면 return1
     private static int inspection(int j) {
-        //3개 따로따로 계속 더해줘서 return해야하나? 111 112 113 114 115 if N이 5개면 125개 케이스?
         for (int i =1; i< j; i++) {
             for(int x = 1; x < j; x++){
                 for (int y = 1; y < j; y++) {
