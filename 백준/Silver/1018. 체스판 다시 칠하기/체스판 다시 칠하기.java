@@ -1,6 +1,4 @@
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -41,16 +39,17 @@ public class Main {
                     for (int j = 0; j < 8; j++) {
                         char current = board[x + i][y + j];
 
-                        char expectedW = ((i + j) % 2 == 0) ? 'W' : 'B';  // 'W'부터 시작할 경우
-                        char expectedB = ((i + j) % 2 == 0) ? 'B' : 'W';  // 'B'부터 시작할 경우
+                        char expectedW = ((i+j) %2 == 0) ? 'W' : 'B'; // W로 시작한다 가정할때 만약 i+j%2가 0이면 white
+                        char expectedB = ((i+j) %2 ==0 ) ? 'B' : 'W'; // B로 시작한다 가정할때 만약 i+j %2가 0이면 Black
 
-                        if (current != expectedW) w_start++;
-                        if (current != expectedB) b_start++;
+
+                        if (current != expectedW) w_start++; // 만약 W로 시작했을때 바꿔야하는 색의 수
+                        if (current != expectedB) b_start++; // 만약 B로 시작했을때 바꿔야하는 색의 수
                     }
                 }
 
-                int minresult = Math.min(w_start, b_start);
-                result = Math.min(result, minresult);
+                int minresult = Math.min(w_start, b_start); //최소 색칠 수
+                result = Math.min(result, minresult); // 그래서 결과는 계속 갱신해줘야함
             }
         }
 
