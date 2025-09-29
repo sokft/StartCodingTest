@@ -11,14 +11,18 @@ public class Main {
 
         // Please write your code here.
         Arrays.sort(arr);
-        for (int i = 0; i < n; i++) {
-           
-        }
-        Integer arr2 = Arrays.stream(arr).boxed().toArray(Integer[]::new);
+        Integer[] arr2 = Arrays.stream(arr).boxed().toArray(Integer[]::new);
         Arrays.sort(arr2, Collections.reverseOrder());
         for (int i = 0; i < n; i++) {
-            System.out.print(arr2[i] + " ");
+            System.out.print(arr[i] + " ");
+            
         }
+        System.out.println();
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr2[i] + " ");
+            
+        }
+
         
 
     }
