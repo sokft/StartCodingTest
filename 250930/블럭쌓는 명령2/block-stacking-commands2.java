@@ -19,7 +19,7 @@ public class Main {
             int B = sc.nextInt();
 
             for (int j = A; j <= B; j++) {
-                arr[A-1] += 1; 
+                arr[j-1] += 1; 
             }
 
         }
