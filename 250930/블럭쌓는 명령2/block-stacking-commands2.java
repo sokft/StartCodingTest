@@ -10,7 +10,7 @@ public class Main {
         // 몇번 놓는지
         int K = sc.nextInt();
 
-        int[] arr = new int[7];
+        int[] arr = new int[N];
 
         for (int i = 0; i < K; i++) {
 
