@@ -9,7 +9,7 @@ public class Main {
         for (int i = 0; i < n; i++) {
             x1[i] = sc.nextInt() + 100;
             x2[i] = sc.nextInt() + 100;
-            for(int j = x1[i]; j <= x2[i]; j++) {
+            for(int j = x1[i]; j < x2[i]; j++) {
                 arr[j] += 1;
             }
         }
