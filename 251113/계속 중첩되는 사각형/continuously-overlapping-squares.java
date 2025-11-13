@@ -1,32 +1,26 @@
 import java.util.*;
 public class Main {
+
+    private static final int OFFSET = 100;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int[][] arr = new int[201][201];
         for (int i = 0; i < n; i++) {
+            int x1 = sc.nextInt()+OFFSET;
+            int y1 = sc.nextInt()+OFFSET;
+            int x2 = sc.nextInt()+OFFSET;
+            int y2 = sc.nextInt()+OFFSET;
             if(i%2 == 0) {
-            int x1 = sc.nextInt()+100;
-            int y1 = sc.nextInt()+100;
-            int x2 = sc.nextInt()+100;
-            int y2 = sc.nextInt()+100;
-            
             for(int j = x1; j < x2; j++){
                 for(int k = y1; k<y2;k++) {
                     arr[j][k] = 0;
                 }
                 }
             } else {
-
-            
-            int x1 = sc.nextInt()+100;
-            int y1 = sc.nextInt()+100;
-            int x2 = sc.nextInt()+100;
-            int y2 = sc.nextInt()+100;
-            
             for(int j = x1; j < x2; j++){
                 for(int k = y1; k<y2;k++) {
-                    arr[j][k] += 1;
+                    arr[j][k] = 1;
                 }
              }
             }
@@ -35,7 +29,7 @@ public class Main {
         int answer = 0;
         for(int[] i : arr) {
             for (int j : i) {
-                if (j >= 1) answer++;
+                if (j == 1) answer++;
             }
         }
         
