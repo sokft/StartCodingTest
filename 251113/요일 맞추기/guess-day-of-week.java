@@ -18,7 +18,7 @@ public class Main {
 
         int day = 0;
 
-        if (m1 <= m2 && d1 <= d2){ 
+        if (m1 < m2 || (m1 == m2 && d1 < d2)){ 
         //1. 날짜가 m1d1 < m2d2
         while(true) {
             if(m1 == m2 && d1 == d2) {
@@ -32,18 +32,18 @@ public class Main {
                 d1 = 1;
             }
         }
-        } else if (m1 >= m2 && d1 >= d2 ) {
+        } else if (m1 > m2 || (m1 == m2 && d1 > d2)) {
         //2. 날짜가 m1d1 > m2d2
         while(true) {
             if(m1 == m2 && d1 == d2) {
                 break;
             }
 
-            d2++;
+            d1--;
             day--;
-            if(d2 > days[m2]) {
-                m2++;
-                d2 = 1;
+            if(d1 < 1) {
+                m1--;
+                d1 = days[m1];
             }
         }
         }
