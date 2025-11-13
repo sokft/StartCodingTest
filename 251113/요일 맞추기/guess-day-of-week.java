@@ -50,14 +50,7 @@ public class Main {
 
         //음수면 7 - 절댓값
 
-        int weekDay = 0;
-        if(day < 0) {
-            weekDay = Math.abs(day);
-            weekDay = weekDay % 7;
-            System.out.println(weeks[7 - weekDay]);
-        } else if (day >= 0) {
-            weekDay = weekDay %7;
-            System.out.println(weeks[weekDay]);
-        }
+        int weekDay = (day % 7 + 7) % 7;
+        System.out.println(weeks[weekDay]);
     }
 }
