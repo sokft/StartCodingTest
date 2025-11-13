@@ -13,8 +13,7 @@ public class Main {
                 arr[j] += 1;
             }
         }
-        Arrays.sort(arr);
-        System.out.println(arr[200]);
-
+        int[] reversedArr = Arrays.stream(arr).boxed().sorted(Comparator.reverseOrder()).mapToInt(Integer::intValue).toArray();
+        System.out.println(reversedArr[0]);
     }
 }
