@@ -23,10 +23,11 @@ public class Main {
             }
 
         }
-        if (n==1) {
-                System.out.println(1);
-            } else {
-        System.out.println(answer);
-            }
+        if (cnt > answer) {
+            answer = cnt;
+        }
+                System.out.println(answer);
+
+    
     }
 }
