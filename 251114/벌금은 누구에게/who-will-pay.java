@@ -9,14 +9,20 @@ public class Main {
         int k = sc.nextInt();
         int[] person = new int[n+1];
         int[] penalizedPerson = new int[m];
+        int answer = -1;
         for (int i = 0; i < m; i++) {
             penalizedPerson[i] = sc.nextInt();
             person[penalizedPerson[i]] += 1;
             if(person[penalizedPerson[i]] == k) {
-                System.out.println(penalizedPerson[i]);
+                answer = penalizedPerson[i];
                 break;
             }
         }
+        if(answer > 0) {
+            System.out.println(answer);
+        } else {
+                        System.out.println(-1);
 
+        }
     }
 }
