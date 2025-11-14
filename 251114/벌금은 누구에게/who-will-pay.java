@@ -18,11 +18,7 @@ public class Main {
                 break;
             }
         }
-        if(answer > 0) {
-            System.out.println(answer);
-        } else {
-                        System.out.println(-1);
-
-        }
+        System.out.println(answer);
+      
     }
 }
